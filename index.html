@@ -3,15 +3,69 @@
 <head>
   <title>Experiment</title>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <body style="background-color:#25253a;">
+  <body style="background-color:#1e1e36;">
 </head>
+<style>
+  .container {
+    position: relative;
+  }
+
+  .white-square {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .purple-square {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+  }
+
+ 
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+#move {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.move {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+}
+
+  </style>
+
+<header>
+  <h1 style="color:White; font-family:Courier New; text-align: center;">Title</h1>
+</header>
 
 <body>
 
-    <h1>Hello World</h1>
+  <div class="container">
+  <div class="white-square">
+    <p style="color:White; font-family:Courier New; text-align: center;">
+    <img src="images/white-square.jpg" alt="White square"></p></div>
 
-    <p><img src="images/purple-square.jpg" alt="Purple square"></p>
-
+  <div class="purple-square">
+    <p style="color:White; font-family:Courier New; text-align: center;">
+    <img src="images/purple-square.jpg" alt="Purple square"></p></div>
+  </div>
+  
 </body>
+
+<div id="move" class="move"></div>
 
 </html>
